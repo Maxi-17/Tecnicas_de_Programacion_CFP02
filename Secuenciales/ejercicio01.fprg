@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-20 05:51:36 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswNToxOTo1MyBwLsKgbS47Mjk4Ng=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswNTo1MTozNiBwLsKgbS47MjszMDky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lado" type="Real" array="False" size=""/>
+            <declare name="area" type="Real" array="False" size=""/>
+            <input variable="lado"/>
+            <assign variable="area" expression="lado * lado"/>
+            <output expression="&quot;El area es: &quot; &amp; area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

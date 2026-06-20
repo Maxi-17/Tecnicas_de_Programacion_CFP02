@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-20 06:15:50 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswNTo1MTo0NCBwLsKgbS47Mjk4Mg=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswNjoxNTo1MCBwLsKgbS47NDszMDkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dias" type="Integer" array="False" size=""/>
+            <declare name="precio" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <input variable="dias"/>
+            <if expression="dias &lt;= 5">
+                <then>
+                    <assign variable="precio" expression="3000"/>
+                </then>
+                <else>
+                    <if expression="dias &lt;= 10">
+                        <then>
+                            <assign variable="precio" expression="2500"/>
+                        </then>
+                        <else>
+                            <assign variable="precio" expression="2000"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="dias * precio"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
