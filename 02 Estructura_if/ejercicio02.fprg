@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-20 10:09:47 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswOTo1MjoyOSBwLsKgbS47Mjk5MA=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDsxMDowOTo0NyBwLsKgbS47MjszMDkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Real" array="False" size=""/>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Ingresa un numero: &quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero &gt; 500">
+                <then>
+                    <assign variable="resultado" expression="(numero * 18) / 100"/>
+                    <output expression="&quot;El 18% de &quot; &amp; numero &amp; &quot; es: &quot; &amp; resultado" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El numero ingresado no es mayor a 500, no calculo.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 11:35:18 a.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMToyMjoyOCBhLsKgbS47Mjk2NQ=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMTozNToxOCBhLsKgbS47MjszMDc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingresa el primer numero positivo: &quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Ingresa el segundo numero positivo: &quot;" newline="True"/>
+            <input variable="num2"/>
+            <if expression="num2 &lt;= num1">
+                <then>
+                    <output expression="&quot;Error: El segundo numero tiene q ser mayor que el primero&quot;" newline="True"/>
+                    <output expression="&quot;Ingresa el segundo numero positivo: &quot;" newline="True"/>
+                    <input variable="num2"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Los numeros pares entre &quot; &amp; num1 &amp; &quot; y &quot; &amp; num2 &amp; &quot; son:&quot;" newline="True"/>
+            <for variable="i" start="num1" end="num2" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

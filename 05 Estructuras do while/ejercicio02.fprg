@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 12:51:53 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMjoyMjoxMCBwLsKgbS47Mjk3Mg=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMjo1MTo1MyBwLsKgbS47MjszMDkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <declare name="regalo" type="Integer" array="False" size=""/>
+            <declare name="totalRecibido" type="Real" array="False" size=""/>
+            <assign variable="edad" expression="12"/>
+            <assign variable="regalo" expression="10"/>
+            <assign variable="totalRecibido" expression="0"/>
+            <while expression="regalo &lt;= 1000">
+                <assign variable="totalRecibido" expression="totalRecibido + regalo"/>
+                <if expression="regalo * 2 &lt;= 1000">
+                    <then>
+                        <assign variable="regalo" expression="regalo * 2"/>
+                        <assign variable="edad" expression="edad + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="regalo" expression="1001"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;El ni&#241;o tendra &quot; &amp; edad &amp; &quot; a&#241;os cuando reciba el ultimo regalo&quot;" newline="True"/>
+            <output expression="&quot;La cantidad total recibida es de: &quot; &amp; totalRecibido &amp; &quot; dolares&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

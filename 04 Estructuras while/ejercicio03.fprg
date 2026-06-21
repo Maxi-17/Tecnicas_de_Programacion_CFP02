@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 11:00:02 a.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMDo1MDozNyBhLsKgbS47Mjk2NQ=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMTowMDowMiBhLsKgbS47MjszMDYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="clave" type="String" array="False" size=""/>
+            <declare name="confirmacion" type="String" array="False" size=""/>
+            <output expression="&quot;Crea tu contrase&#241;a: &quot;" newline="True"/>
+            <input variable="clave"/>
+            <output expression="&quot;Confirma tu contrase&#241;a: &quot;" newline="True"/>
+            <input variable="confirmacion"/>
+            <while expression="clave != confirmacion">
+                <output expression="&quot;Error: Las contrase&#241;as no coinciden. Intentalo nuevamente&quot;" newline="True"/>
+                <output expression="&quot;Crea tu contrase&#241;a: &quot;" newline="True"/>
+                <input variable="clave"/>
+                <output expression="&quot;Confirma tu contrase&#241;a: &quot;" newline="True"/>
+                <input variable="confirmacion"/>
+            </while>
+            <output expression="&quot;Contrase&#241;a establecida con exito!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

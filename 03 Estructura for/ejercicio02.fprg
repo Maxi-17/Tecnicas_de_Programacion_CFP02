@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 09:19:14 a.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswOTowNzoyNyBhLsKgbS47Mjk3NA=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswOToxOToxNCBhLsKgbS47MjszMDgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <assign variable="j" expression="11 - i"/>
+                <output expression="&quot;Cuenta: &quot; &amp; i &amp; &quot; | Inversa: &quot; &amp; j" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

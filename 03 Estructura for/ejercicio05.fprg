@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 09:58:46 a.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswOTo0NTo0OSBhLsKgbS47Mjk4MA=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswOTo1ODo0NiBhLsKgbS47MzszMDkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="mayor" type="Integer" array="False" size=""/>
+            <declare name="menor" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <output expression="&quot;Ingresa un numero: &quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="i == 1">
+                    <then>
+                        <assign variable="mayor" expression="num"/>
+                        <assign variable="menor" expression="num"/>
+                    </then>
+                    <else>
+                        <if expression="num &gt; mayor">
+                            <then>
+                                <assign variable="mayor" expression="num"/>
+                            </then>
+                            <else>
+                                <assign variable="menor" expression="num"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;El numero mayor es: &quot; &amp; mayor" newline="True"/>
+            <output expression="&quot;El numero menor es: &quot; &amp; menor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

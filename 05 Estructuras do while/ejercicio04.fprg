@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 01:42:24 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswMToxMjoyNyBwLsKgbS47Mjk3Nw=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswMTo0MjoyNCBwLsKgbS47MjszMDg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numCuenta" type="Integer" array="False" size=""/>
+            <declare name="saldo" type="Real" array="False" size=""/>
+            <declare name="sumaAcreedores" type="Real" array="False" size=""/>
+            <assign variable="sumaAcreedores" expression="0"/>
+            <output expression="&quot;Ingresa numero de cuenta (negativo para salir): &quot;" newline="True"/>
+            <input variable="numCuenta"/>
+            <while expression="numCuenta &gt;= 0">
+                <output expression="&quot;Ingresa el saldo de la cuenta &quot; &amp; numCuenta &amp; &quot;: &quot;" newline="True"/>
+                <input variable="saldo"/>
+                <if expression="saldo &gt; 0">
+                    <then>
+                        <output expression="&quot;Estado: Acreedor&quot;" newline="True"/>
+                        <assign variable="sumaAcreedores" expression="sumaAcreedores  + saldo"/>
+                    </then>
+                    <else>
+                        <if expression="saldo &lt; 0">
+                            <then>
+                                <output expression="&quot;Estado: Deudor&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Estado: Nulo&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Ingrese el siguiente n&#250;mero de cuenta (negativo para salir): &quot;" newline="True"/>
+            </while>
+            <output expression="&quot;La suma total de los saldos acreedores es: $&quot; &amp; sumaAcreedores" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 08:54:01 a.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDsxMDoyMzo1MiBwLsKgbS47Mjk3Ng=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTswODo1NDowMSBhLsKgbS47MjszMDc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="producto" type="String" array="False" size=""/>
+            <declare name="cantidad" type="Real" array="False" size=""/>
+            <declare name="precioUnitario" type="Real" array="False" size=""/>
+            <declare name="valorOriginal" type="Real" array="False" size=""/>
+            <declare name="valorDescuento" type="Real" array="False" size=""/>
+            <declare name="valorFinal" type="Real" array="False" size=""/>
+            <declare name="descuentoPorcentaje" type="Real" array="False" size=""/>
+            <output expression="&quot;Deseas comprar 'libro' o 'cuaderno'?: &quot;" newline="True"/>
+            <input variable="producto"/>
+            <output expression="&quot;Ingresa la cantidad de articulos: &quot;" newline="True"/>
+            <input variable="cantidad"/>
+            <if expression="producto == &quot;cuaderno&quot;">
+                <then>
+                    <assign variable="precioUnitario" expression="250"/>
+                </then>
+                <else>
+                    <if expression="producto == &quot;libro&quot;">
+                        <then>
+                            <assign variable="precioUnitario" expression="500"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Producto no valido&quot;" newline="True"/>
+                            <assign variable="precioUnitario" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="precioUnitario &gt; 0">
+                <then>
+                    <assign variable="valorOriginal" expression="precioUnitario * cantidad"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cantidad &gt;= 25">
+                <then>
+                    <assign variable="descuentoPorcentaje" expression="0.30"/>
+                </then>
+                <else>
+                    <if expression="cantidad &gt;= 13">
+                        <then>
+                            <assign variable="descuentoPorcentaje" expression="0.10"/>
+                        </then>
+                        <else>
+                            <assign variable="descuentoPorcentaje" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="valorDescuento" expression="valorOriginal * descuentoPorcentaje"/>
+            <assign variable="valorFinal" expression="valorOriginal - valorDescuento"/>
+            <output expression="&quot;Valor original: $&quot; &amp; valorOriginal" newline="True"/>
+            <output expression="&quot;Descuento: $&quot; &amp; valorDescuento" newline="True"/>
+            <output expression="&quot;Valor final: $&quot; &amp; valorFinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

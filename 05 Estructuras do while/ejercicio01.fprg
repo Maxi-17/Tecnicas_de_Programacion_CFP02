@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 12:22:00 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMTozNzoxOCBhLsKgbS47Mjk3MA=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMTsxMjoyMjowMCBwLsKgbS47MjszMDgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Real" array="False" size=""/>
+            <declare name="contMenores" type="Integer" array="False" size=""/>
+            <declare name="contMayores" type="Integer" array="False" size=""/>
+            <declare name="contRango" type="Integer" array="False" size=""/>
+            <declare name="inputUsuario" type="String" array="False" size=""/>
+            <assign variable="contMenores" expression="0"/>
+            <assign variable="contMayores" expression="0"/>
+            <assign variable="contRango" expression="0"/>
+            <do expression="inputUsuario != &quot;x&quot;">
+                <output expression="&quot;Ingresa un numero (o 'x' para salir): &quot;" newline="True"/>
+                <input variable="inputUsuario"/>
+                <if expression="inputUsuario != &quot;x&quot;">
+                    <then>
+                        <assign variable="num" expression="ToReal(inputUsuario)"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="num &lt; 15">
+                    <then>
+                        <assign variable="contMenores" expression="contMenores + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="num &gt; 50">
+                    <then>
+                        <assign variable="contMayores" expression="contMayores + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="num &gt;= 25 &amp;&amp; num &lt;= 45">
+                    <then>
+                        <assign variable="contRango" expression="contRango + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;Menores que 15: &quot; &amp; contMenores" newline="True"/>
+            <output expression="&quot;Mayores que 50: &quot; &amp; contMayores" newline="True"/>
+            <output expression="&quot;En el rango 25-45: &quot; &amp; contRango" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
