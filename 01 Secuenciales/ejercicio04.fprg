@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MAXI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-20 08:32:33 p.&#160;m."/>
+        <attribute name="created" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswODowNToxNCBwLsKgbS47Mjk4MQ=="/>
+        <attribute name="edited" value="TUFYSTtMQVBUT1AtTkFVS0lUOTg7MjAyNi0wNi0yMDswODozMjozMyBwLsKgbS47MzszMDky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suma" type="Real" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <declare name="nota" type="Real" array="False" size=""/>
+            <declare name="promedio" type="Real" array="False" size=""/>
+            <output expression="&quot;Ingresa la 1er nota:&quot;" newline="True"/>
+            <input variable="nota"/>
+            <assign variable="suma" expression="suma + nota"/>
+            <output expression="&quot;Ingresa la 2da nota:&quot;" newline="True"/>
+            <input variable="nota"/>
+            <assign variable="suma" expression="suma + nota"/>
+            <output expression="&quot;Ingresa la 3ra nota:&quot;" newline="True"/>
+            <input variable="nota"/>
+            <assign variable="suma" expression="suma + nota"/>
+            <output expression="&quot;Ingresa la 4ta nota:&quot;" newline="True"/>
+            <input variable="nota"/>
+            <assign variable="suma" expression="suma + nota"/>
+            <output expression="&quot;Ingresa la 5ta nota:&quot;" newline="True"/>
+            <input variable="nota"/>
+            <assign variable="suma" expression="suma + nota"/>
+            <assign variable="promedio" expression="suma / 5"/>
+            <if expression="promedio &gt;= 6">
+                <then>
+                    <output expression="&quot;El promedio es &quot; &amp; promedio &amp; &quot;. Estado: Aprobado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El promedio es &quot; &amp; promedio &amp; &quot;. Estado: Desaprobado&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
